@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edit Kategori</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+    body {
+      font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #f4f6fb;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: linear-gradient(180deg, #1d3557, #457b9d);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateX(5px);
+    }
+
+    .sidebar a.active {
+      background: rgba(255,255,255,0.25);
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .main h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #1d3557;
+      font-size: 26px;
+    }
+
+    /* Form Container */
+    .form-container {
+      background: #fff;
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 400px;
+      margin: 0 auto;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1d3557;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+    }
+
+    /* Buttons */
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: #339af0;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-submit:hover {
+      background: #1c7ed6;
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="menu.html">Menu</a>
+    <a href="kategori.html" class="active">Kategori</a>
+    <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
+    <a href="input_transaksi.html">Input Transaksi</a>
+    <a href="profile.html">Profile Admin</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <!-- Main Content -->
+  <div class="main">
+    <h1>Edit Kategori</h1>
+
+    <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="nama">Nama Kategori</label>
+          <input type="text" id="nama" value="Makanan" required>
+        </div>
+        <button type="submit" class="btn-submit">Simpan Perubahan</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>

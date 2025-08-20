@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Admin</title>
+  <style>
+    @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+    body {
+      font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+      margin: 0;
+      display: flex;
+      height: 100vh;
+      background-color: #f4f6fb;
+      color: #333;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      width: 240px;
+      background: linear-gradient(180deg, #1d3557, #457b9d);
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar h2 {
+      margin-bottom: 40px;
+      text-align: center;
+      font-size: 22px;
+      letter-spacing: 1px;
+    }
+
+    .sidebar a {
+      text-decoration: none;
+      color: #fff;
+      padding: 14px 18px;
+      margin-bottom: 12px;
+      border-radius: 8px;
+      display: block;
+      font-size: 16px;
+      font-weight: 500;
+      transition: 0.3s;
+    }
+
+    .sidebar a:hover {
+      background: rgba(255,255,255,0.15);
+      transform: translateX(5px);
+    }
+
+    .sidebar a.active {
+      background: rgba(255,255,255,0.25);
+      font-weight: 600;
+    }
+
+    /* Main Content */
+    .main {
+      flex: 1;
+      padding: 30px;
+      overflow-y: auto;
+    }
+
+    .main h1 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #1d3557;
+      font-size: 26px;
+    }
+
+    /* Profile Card */
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 600px;
+      margin: 0 auto;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    .card h2 {
+      text-align: center;
+      color: #1d3557;
+      margin-bottom: 25px;
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 12px 14px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 15px;
+      outline: none;
+      transition: 0.3s;
+       box-sizing: border-box; /* 🔥 FIX supaya tidak melebihi card */
+    }
+
+    .form-group input:focus {
+      border-color: #457b9d;
+      box-shadow: 0 0 6px rgba(69, 123, 157, 0.4);
+    }
+
+    /* Buttons */
+    .form-actions {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 25px;
+    }
+
+    .btn {
+      padding: 12px 20px;
+      border: none;
+      border-radius: 10px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .btn-save {
+      background: linear-gradient(135deg, #06d6a0, #1dd3b0);
+      color: #fff;
+    } */
+
+     .btn-save:hover {
+      background: linear-gradient(135deg, #06b48a, #0fa986);
+    }
+
+    /* .btn-save {
+      background: #ef476f;
+      color: #fff;
+    }
+
+    .btn-save:hover {
+      background: #d93a60;
+    } */
+  </style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="menu.html"> Menu</a>
+    <a href="kategori.html"> Kategori</a>
+    <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
+    <a href="input_transaksi.html">Input Transaksi</a>
+    <a href="profile.html" class="active">Profile Admin</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <h1>Data Admin</h1>
+
+    <div class="card">
+      <h2>Profil Admin</h2>
+      <form action="#" method="post">
+        <div class="form-group">
+          <label for="nama">Nama Lengkap</label>
+          <input type="text" id="nama" name="nama" value="M. Ardhan Rahman">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" value="admin@example.com">
+        </div>
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" value="admin123">
+        </div>
+        <div class="form-group">
+          <label for="password">Password Baru</label>
+          <input type="password" id="password" name="password" placeholder="••••••••">
+        </div>
+
+        <div class="form-actions">
+          <!-- <button type="submit" class="btn btn-save"></button> -->
+          <button type="reset" class="btn btn-save">Simpan Perubahan Baru</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
