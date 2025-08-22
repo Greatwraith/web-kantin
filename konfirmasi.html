@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Konfirmasi Pesanan</title>
+  <style>
+  @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
+
+  body {
+    font-family: 'SF Pro Display', 'Helvetica Neue', Arial, sans-serif;
+    margin: 0;
+    display: flex;
+    height: 100vh;
+    background-color: #f4f6fb;
+    color: #333;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 240px;
+    background: linear-gradient(180deg, #1d3557, #457b9d);
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar h2 {
+    margin-bottom: 40px;
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 1px;
+  }
+
+  .sidebar a {
+    text-decoration: none;
+    color: #fff;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    display: block;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.3s;
+  }
+
+  .sidebar a:hover {
+    background: rgba(255,255,255,0.15);
+    transform: translateX(5px);
+  }
+
+  .sidebar a.active {
+    background: rgba(255,255,255,0.25);
+    font-weight: 600;
+  }
+
+  /* Main */
+  .main {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+  }
+
+  .main h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    color: #1d3557;
+    font-size: 26px;
+  }
+
+  /* Table */
+  .table-container {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    overflow-x: auto;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+
+  table th, table td {
+    border: 1px solid #ddd;
+    padding: 12px 14px;
+    text-align: center;
+    font-size: 15px;
+  }
+
+  table th {
+    background: #1d3557;
+    color: #fff;
+    font-weight: 600;
+  }
+
+  table tr:nth-child(even) {
+    background: #f8f9fc;
+  }
+
+  table tr:hover {
+    background: #eef3fb;
+  }
+
+  /* Button */
+  .btn {
+    padding: 8px 14px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 0.3s;
+  }
+  .btn-confirm {
+    background: #51cf66;
+    color: #fff;
+  }
+  .btn-confirm:hover {
+    background: #37b24d;
+  }
+  .btn-decline {
+    background: #f03e3e;
+    color: #fff;
+  }
+  .btn-decline:hover {
+    background: #c92a2a;
+  }
+
+  .nama-link {
+    color: #1d3557;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  .nama-link:hover {
+    text-decoration: underline;
+  }
+</style>
+</head>
+<body>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <h2>Admin Panel</h2>
+    <a href="index.html">Dashboard</a>
+    <a href="menu.html"> Menu</a>
+    <a href="kategori.html"> Kategori</a>
+    <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
+    <a href="konfirmasi.html" class="active">Konfirmasi Pesanan</a>
+    <a href="profile.html">Profile Admin</a>
+    <a href="#">Logout</a>
+  </div>
+
+  <!-- Main -->
+  <div class="main">
+    <h1>Konfirmasi Pesanan Pelanggan</h1>
+
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama Pelanggan</th>
+            <th>Total Item</th>
+            <th>Total Harga</th>
+            <th>Tanggal Pesanan</th>
+            <th>Aksi</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td><a href="pesananpelanggan.html" class="nama-link">Haru</a></td>
+            <td>4 (2 Makanan, 2 Minuman)</td>
+            <td>Rp 30.000</td>
+            <td>21-August-2025 13:15</td>
+            <td>
+              <button class="btn btn-confirm">Konfirmasi</button>
+              <button class="btn btn-decline">Tolak</button>
+            </td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td><a href="pesananpelanggan.html" class="nama-link">Ayu</a></td>
+            <td>3 (1 Makanan, 2 Minuman)</td>
+            <td>Rp 22.000</td>
+            <td>21-August-2025 13:20</td>
+            <td>
+              <button class="btn btn-confirm">Konfirmasi</button>
+              <button class="btn btn-decline">Tolak</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</body>
+</html>

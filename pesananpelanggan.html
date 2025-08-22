@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konfirmasi Pesanan</title>
+  <title>Detail Pesanan Pelanggan</title>
   <style>
     @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
@@ -63,17 +63,21 @@
     }
 
     .main h1 {
-      text-align: center;
-      margin-bottom: 25px;
+      margin-bottom: 10px;
       color: #1d3557;
       font-size: 26px;
+    }
+
+    .customer-info {
+      margin-bottom: 20px;
+      font-size: 16px;
     }
 
     /* Table */
     table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 20px;
+      margin-top: 10px;
       background: #fff;
       border-radius: 12px;
       overflow: hidden;
@@ -100,33 +104,30 @@
       color: #444;
     }
 
-    /* Buttons */
-    .btn {
-      padding: 8px 14px;
+    .total {
+      text-align: right;
+      font-weight: bold;
+      font-size: 16px;
+      padding: 15px;
+      margin-top: 10px;
+    }
+
+    .back-btn {
+      margin-top: 20px;
+      padding: 10px 18px;
+      background: #457b9d;
+      color: #fff;
       border: none;
       border-radius: 8px;
       font-size: 14px;
-      font-weight: 600;
       cursor: pointer;
+      text-decoration: none;
+      display: inline-block;
       transition: 0.3s;
     }
 
-    .btn-confirm {
-      background: #51cf66;
-      color: #fff;
-    }
-
-    .btn-confirm:hover {
-      background: #37b24d;
-    }
-
-    .btn-reject {
-      background: #ff6b6b;
-      color: #fff;
-    }
-
-    .btn-reject:hover {
-      background: #e03131;
+    .back-btn:hover {
+      background: #1d3557;
     }
   </style>
 </head>
@@ -139,48 +140,52 @@
     <a href="menu.html">Menu</a>
     <a href="kategori.html">Kategori</a>
     <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
-    <a href="konfirmasi_pesanan.html" class="active">Konfirmasi Pesanan</a>
+    <a href="konfirmasi.html" class="active">Konfirmasi Pesanan</a>
     <a href="profile.html">Profile Admin</a>
     <a href="#">Logout</a>
   </div>
 
   <!-- Main -->
   <div class="main">
-    <h1>Konfirmasi Pesanan</h1>
+    <h1>Detail Pesanan Pelanggan</h1>
+    <div class="customer-info">
+      <strong>Nama Pelanggan:</strong> Haru <br>
+      <strong>Tanggal Pesanan:</strong> 21-Agustus-2025 13:15
+    </div>
 
     <table>
       <thead>
         <tr>
-          <th>Nama User</th>
-          <th>Jumlah Item</th>
+          <th>No</th>
+          <th>Nama Item</th>
+          <th>Jumlah</th>
+          <th>Harga per Item</th>
           <th>Total Harga</th>
-          <th>Tanggal Pesan</th>
-          <th>Status</th>
         </tr>
       </thead>
       <tbody>
         <tr>
-          <td>Haru</td>
-          <td>4 item (2 Makanan, 2 Minuman)</td>
-          <td>Rp 30.000</td>
-          <td>21-Agustus-2025 13:15</td>
-          <td>
-            <button class="btn btn-confirm">Konfirmasi</button>
-            <button class="btn btn-reject">Tolak</button>
-          </td>
+          <td>1</td>
+          <td>Nasi Goreng</td>
+          <td>2</td>
+          <td>Rp 10.000</td>
+          <td>Rp 20.000</td>
         </tr>
         <tr>
-          <td>Ardhan</td>
-          <td>3 item (1 Makanan, 2 Minuman)</td>
-          <td>Rp 22.000</td>
-          <td>22-Agustus-2025 10:45</td>
-          <td>
-            <button class="btn btn-confirm">Konfirmasi</button>
-            <button class="btn btn-reject">Tolak</button>
-          </td>
+          <td>2</td>
+          <td>Es Teh</td>
+          <td>2</td>
+          <td>Rp 5.000</td>
+          <td>Rp 10.000</td>
         </tr>
       </tbody>
     </table>
+
+    <div class="total">
+      Total Keseluruhan: Rp 30.000
+    </div>
+
+    <a href="konfirmasi.html" class="back-btn">← Kembali</a>
   </div>
 
 </body>
