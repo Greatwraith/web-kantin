@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Konfirmasi Pesanan</title>
+  <title>Tambah Menu</title>
   <style>
     @import url('https://fonts.cdnfonts.com/css/sf-pro-display');
 
@@ -12,7 +12,7 @@
       margin: 0;
       display: flex;
       height: 100vh;
-      background-color: #f4f6fb;
+      background-color: #fdfdfd;
       color: #333;
     }
 
@@ -55,7 +55,7 @@
       font-weight: 600;
     }
 
-    /* Main */
+    /* Main Content */
     .main {
       flex: 1;
       padding: 30px;
@@ -63,71 +63,68 @@
     }
 
     .main h1 {
-      text-align: center;
-      margin-bottom: 25px;
+      font-size: 28px;
       color: #1d3557;
-      font-size: 26px;
+      margin-bottom: 25px;
     }
 
-    /* Table */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 20px;
+    /* Form Container */
+    .form-container {
       background: #fff;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+      border-radius: 16px;
+      padding: 25px;
+      max-width: 500px;
+      margin: 0 auto;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
     }
 
-    th, td {
-      padding: 14px 18px;
-      text-align: center;
+    .form-group { margin-bottom: 20px; }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: #1d3557;
     }
 
-    th {
-      background-color: #1d3557;
-      color: #fff;
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
       font-size: 15px;
     }
 
-    tr:nth-child(even) {
-      background-color: #f8f9fd;
-    }
-
-    td {
-      font-size: 14px;
-      color: #444;
-    }
-
     /* Buttons */
-    .btn {
-      padding: 8px 14px;
+    .btn-submit {
+      width: 100%;
+      padding: 14px;
+      background: #51cf66;
       border: none;
       border-radius: 8px;
-      font-size: 14px;
+      color: #fff;
+      font-size: 16px;
       font-weight: 600;
       cursor: pointer;
       transition: 0.3s;
     }
+    .btn-submit:hover { background: #37b24d; }
 
-    .btn-confirm {
-      background: #51cf66;
+    .btn-cancel {
+      width: 100%;
+      padding: 14px;
+      background: #adb5bd;
+      border: none;
+      border-radius: 8px;
       color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
     }
+    .btn-cancel:hover { background: #868e96; }
 
-    .btn-confirm:hover {
-      background: #37b24d;
-    }
-
-    .btn-reject {
-      background: #ff6b6b;
-      color: #fff;
-    }
-
-    .btn-reject:hover {
-      background: #e03131;
-    }
   </style>
 </head>
 <body>
@@ -135,52 +132,45 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <h2>Admin Panel</h2>
-    <a href="index.html">Dashboard</a>
-    <a href="menu.html">Menu</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="menu.html" class="active">Menu</a>
     <a href="kategori.html">Kategori</a>
     <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
-    <a href="konfirmasi_pesanan.html" class="active">Konfirmasi Pesanan</a>
+    <a href="input_transaksi.html">Input Transaksi</a>
     <a href="profile.html">Profile Admin</a>
     <a href="#">Logout</a>
   </div>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <div class="main">
-    <h1>Konfirmasi Pesanan</h1>
-
-    <table>
-      <thead>
-        <tr>
-          <th>Nama User</th>
-          <th>Jumlah Item</th>
-          <th>Total Harga</th>
-          <th>Tanggal Pesan</th>
-          <th>Status</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Haru</td>
-          <td>4 item (2 Makanan, 2 Minuman)</td>
-          <td>Rp 30.000</td>
-          <td>21-Agustus-2025 13:15</td>
-          <td>
-            <button class="btn btn-confirm">Konfirmasi</button>
-            <button class="btn btn-reject">Tolak</button>
-          </td>
-        </tr>
-        <tr>
-          <td>Ardhan</td>
-          <td>3 item (1 Makanan, 2 Minuman)</td>
-          <td>Rp 22.000</td>
-          <td>22-Agustus-2025 10:45</td>
-          <td>
-            <button class="btn btn-confirm">Konfirmasi</button>
-            <button class="btn btn-reject">Tolak</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+    <h1>Tambah Menu</h1>
+    <div class="form-container">
+      <form>
+        <div class="form-group">
+          <label for="nama">Nama Menu</label>
+          <input type="text" id="nama" placeholder="Masukkan nama menu" required>
+        </div>
+        <div class="form-group">
+          <label for="kategori">Kategori</label>
+          <select id="kategori" required>
+            <option value="">-- Pilih Kategori --</option>
+            <option value="Makanan">Makanan</option>
+            <option value="Minuman">Minuman</option>
+            <option value="Snack">Snack</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="harga">Harga</label>
+          <input type="number" id="harga" placeholder="Masukkan harga menu" required>
+        </div>
+        <div class="form-group">
+          <label for="stok">Stok</label>
+          <input type="number" id="stok" placeholder="Masukkan stok" required>
+        </div>
+        <button type="submit" class="btn-submit">Simpan Menu</button>
+        <button type="button" class="btn-cancel" onclick="window.location.href='menu.html'">Batal</button>
+      </form>
+    </div>
   </div>
 
 </body>

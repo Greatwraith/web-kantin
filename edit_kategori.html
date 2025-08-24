@@ -114,6 +114,24 @@
       background: #1c7ed6;
     }
 
+    .btn-cancel {
+      width: 100%;
+      padding: 14px;
+      background: #adb5bd;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-cancel:hover {
+      background: #868e96;
+    }
+
   </style>
 </head>
 <body>
@@ -141,6 +159,7 @@
           <input type="text" id="nama" value="Makanan" required>
         </div>
         <button type="submit" class="btn-submit">Simpan Perubahan</button>
+        <button type="button" class="btn-cancel" onclick="window.location.href='kategori.html'">Batal</button>
       </form>
     </div>
   </div>

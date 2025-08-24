@@ -114,6 +114,24 @@
       background: #37b24d;
     }
 
+    .btn-cancel {
+      width: 100%;
+      padding: 14px;
+      background: #adb5bd;
+      border: none;
+      border-radius: 8px;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn-cancel:hover {
+      background: #868e96;
+    }
+
   </style>
 </head>
 <body>
@@ -121,11 +139,11 @@
   <!-- Sidebar -->
   <div class="sidebar">
     <h2>Admin Panel</h2>
-   <a href="index.html">Dashboard</a>
+    <a href="index.html">Dashboard</a>
     <a href="menu.html">Menu</a>
     <a href="kategori.html" class="active">Kategori</a>
     <a href="riwayat_transaksi.html">Riwayat Transaksi</a>
-  <a href="konfirmasi.html">Konfirmasi Keranjang</a>
+    <a href="konfirmasi.html">Konfirmasi Keranjang</a>
     <a href="profile.html">Profile Admin</a>
     <a href="#">Logout</a>
   </div>
@@ -141,6 +159,7 @@
           <input type="text" id="nama" placeholder="Masukkan nama kategori" required>
         </div>
         <button type="submit" class="btn-submit">Simpan Kategori</button>
+        <button type="button" class="btn-cancel" onclick="window.location.href='kategori.html'">Batal</button>
       </form>
     </div>
   </div>
